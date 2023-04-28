@@ -1,0 +1,14 @@
+.container {
+  position: relative;
+  height: 100vh; 
+  background-size: cover;
+  background-position: center;
+  background-image: url('/liz-bg-squat.png'); 
+  display: flex;
+  justify-content: center; 
+  align-items: flex-end; 
+}
+
+.btn{
+  margin-bottom: 4px;
+}
