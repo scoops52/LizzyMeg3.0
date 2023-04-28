@@ -1,14 +1,12 @@
 import React from 'react';
 import Link from 'next/link';
-import StyledNavLink from './StyledNavLink.module.css';
+import StyledLinkStyles from '@/styles/StyledLinkStyles.module.scss';
 
-
-const StyledLink = ({href, linkText}) => {
-
+const StyledLink = ({ href, label }) => {
   return (
-    <div className={StyledNavLink.container}>
-        <span className={StyledNavLink.innerContainer}>
-            <Link href={href} className={StyledNavLink.link}>{linkText}</Link>
+    <div className={StyledLinkStyles.container}>
+        <span className={StyledLinkStyles.innerContainer}>
+            <Link href={href} passHref className={StyledLinkStyles.link}>{label}</Link>
         </span>
     </div>
   )
