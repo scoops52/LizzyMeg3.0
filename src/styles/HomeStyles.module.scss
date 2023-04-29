@@ -1,15 +1,97 @@
+@use 'variables.module' as *;
+
+@keyframes slide-in-top {
+    0% {
+        transform: translateY(-150%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    
+    }
+    100% {
+        transform: sclae(1);
+    
+    }
+}
+
+.dancer {
+    animation: slide-in-top 1s ease-in-out 0s forwards;
+    opacity: 0;
+}
+
+.choreographer {
+    animation: slide-in-top 1s ease-in-out 1s forwards;
+    opacity: 0;
+}
+
+.coach{
+    animation: slide-in-top 1s ease-in-out 1.5s forwards;
+    opacity: 0;
+}
+
 .container {
     position: relative;
     height: 100vh; 
     background-size: cover;
     background-position: center;
-    background-image: url('/liz-bg-squat.png'); 
+    background-image: url('/assets/liz-bg-squat.png'); 
     display: flex;
-    justify-content: center; 
-    align-items: flex-end; 
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center; 
+  }
+
+.row {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-family: $primary-font;
+    color: $white-color;
+    
+    
+}
+
+.column {
+    display: flex;
+
   }
   
-  .btn{
+.btn {
     margin-bottom: 4px;
+    opacity: 0;
+    animation: fade-in 1s ease-in-out 2.5s forwards;
   }
+
+//   .btn:hover {
+//     animation: pulse 0.5s ease-in-out;
+//   }
   
+//   .btn:hover {
+//     animation-name: pulse, fade-in;
+//     animation-duration: 0.5s, 0.5s;
+//     animation-timing-function: ease-in-out, ease-in-out;
+//     animation-iteration-count: infinite, 1;
+//     animation-fill-mode: forwards, forwards;
+    
+//   }

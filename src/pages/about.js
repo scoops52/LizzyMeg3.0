@@ -1,10 +1,10 @@
-import StyledLink from '@/components/StyledLink'
+import NavBar from '@/components/NavBar'
 import React from 'react'
 
 const about = () => {
   return (
     <div>
-        <StyledLink href='/' label='Enter' />
+        Hello
     </div>
   )
 }

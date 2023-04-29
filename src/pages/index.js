@@ -16,7 +16,20 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={HomeStyles.container}>
-          <StyledLink href='/about' label='Enter' />
+          <div className={HomeStyles.row}>
+            <div className={HomeStyles.column}>
+              <h1 className={HomeStyles.dancer}>DANCER</h1>
+            </div>
+            <div className={HomeStyles.column}>
+              <h1 className={HomeStyles.choreographer}>CHOREOGRAPHER</h1>
+            </div>
+            <div className={HomeStyles.column}>
+              <h1 className={HomeStyles.coach}>COACH</h1>
+            </div>
+          </div>
+          <div className={HomeStyles.btn}>
+            <StyledLink href='/about' label='Enter' isEnter />
+          </div>
       </div>
     </>
   )
