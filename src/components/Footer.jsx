@@ -13,7 +13,7 @@ const Footer = () => {
         <div className={FooterStyles.contact}>
             <Link href='contact' className={FooterStyles.contactLink}>
                 Contact Me
-                <FontAwesomeIcon icon={faPaperPlane} size={50} className={FooterStyles.contactIcon} />
+                <FontAwesomeIcon icon={faPaperPlane} size='sm' className={FooterStyles.contactIcon} />
             </Link>
         </div>
     </div>

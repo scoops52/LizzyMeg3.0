@@ -29,7 +29,7 @@ const NavBar = () => {
     <div className={NavbarStyles.linksContainer}>
         <ul className={NavbarStyles.links}>
             {['about', 'photos', 'reel', 'contact'].map((item) => (
-                <li key={`link-{item}`} className={NavbarStyles.linkLi}>
+                <li key={`link-${item}`} className={NavbarStyles.linkLi}>
                     <StyledLink href={`/${item}`} label={item} />
                 </li>
             ))}
@@ -58,8 +58,8 @@ const NavBar = () => {
             >
                 <ul className={NavbarStyles.dropdownLinks}>
                     {['about', 'photos', 'reel', 'contact'].map((item) => (
-                        <li key={`link-{item}`} className={NavbarStyles.dropdownLinkLi}>
-                            <Link href={`/${item}`} linkText={item} className={NavbarStyles.dropdownNavLink}>{item}</Link>
+                        <li key={`mobile-link-${item}`} className={NavbarStyles.dropdownLinkLi}>
+                            <Link href={`/${item}`} className={NavbarStyles.dropdownNavLink}>{item}</Link>
                         </li>
                     ))}
                 </ul>
