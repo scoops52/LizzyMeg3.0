@@ -1,0 +1,53 @@
+@use 'variables.module' as *;
+
+.container {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+
+.formContainer,
+.imgContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 auto;
+    width: 40%;
+    height: calc(100vh - 200px);
+    min-height: 600px;
+    margin-top: 1rem;
+}
+
+.title {
+    font-size: 3rem;
+    font-family: $primary-font;
+    color: $orange-color;
+    border-bottom: 2px solid $orange-color;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+}
+
+.img {
+    max-width: 100%;
+    height: auto;
+    padding: 0.25rem;
+    background-color: rgba(73, 183, 211, 0.5);;
+    border: 1px solid $white-color;
+    border-radius: 35%;
+    box-shadow:
+    -50px -50px 0 -40px $orange-color,
+    50px 50px 0 -40px $orange-color;
+}
+
+
+@media screen and (max-width: 600px )  {
+    .imgContainer {
+        display: none;
+    }
+    
+    .formContainer {
+        width: 100%;
+    }
+}

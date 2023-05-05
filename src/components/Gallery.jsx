@@ -43,7 +43,7 @@ const Gallery = ({ images }) => {
                     <FontAwesomeIcon icon={faCircleChevronLeft} className={GalleryStyles.prevBtn} onClick={prevSlide} />
                     <FontAwesomeIcon icon={faCircleChevronRight} className={GalleryStyles.nextBtn} onClick={nextSlide} />
                     <div className={GalleryStyles.fullScreenImage}>
-                        <Image src={images[slideNumber].src} />
+                        <Image src={images[slideNumber].src} alt='Full-Image' />
                     </div>
                 </div>
             }

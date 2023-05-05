@@ -7,8 +7,6 @@ export default function App({ Component, pageProps }) {
 
   if (router.pathname ==='/') return <Component {...pageProps} />
 
-  
-
   return (
   <Layout>
     <Component {...pageProps} />
