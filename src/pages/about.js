@@ -15,6 +15,7 @@ const About = () => {
             src={about} 
             alt="Chase Center with the Warriors Dance Team"
             className={AboutStyles.image}
+            priority
             />
       </div>
     </div>
