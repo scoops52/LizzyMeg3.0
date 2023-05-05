@@ -7,6 +7,7 @@ import { faCircleCheck, faCircleXmark } from '@fortawesome/free-regular-svg-icon
 import emailjs from 'emailjs-com';
 import { useRef } from 'react';
 import ReCAPTCHA from 'react-google-recaptcha';
+import SentModal from './SentModal';
 
 const Form = () => {
     const [nameValidity, setNameValidity] = useState(null);
@@ -17,6 +18,7 @@ const Form = () => {
     const [messageClassName, setMessageClassName] = useState(`${FormStyles.formControl}`);
     const [name, setName] = useState('');
     const [captchaToken, setCaptchaToken] = useState('');
+    const [openModal, setOpenModal] = useState(false)
 
    
 
@@ -82,11 +84,14 @@ const Form = () => {
                 });
         } else {
             alert('Please verify that you are a human')
-        }
+        };
+        setOpenModal(true);
     };
 
+    
 
     return (
+        <>
         <form ref={form} className={FormStyles.form} onSubmit={sendEmail}>
             <input type="hidden" name="form-name" value="contact" className={FormStyles.input} />
             <div className={`${FormStyles.formFloating} ${FormStyles.info}`}>
@@ -161,6 +166,8 @@ const Form = () => {
             />
             </div>
         </form>
+        {openModal && <SentModal handleClose={() => setOpenModal(false)} />}
+        </>
     )
 }
 
