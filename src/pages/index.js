@@ -24,7 +24,8 @@ export default function Home() {
               <h1 className={HomeStyles.choreographer}>CHOREOGRAPHER</h1>
             </div>
             <div className={HomeStyles.column}>
-              <h1 className={HomeStyles.coach}>COACH</h1>
+              <h1 className={HomeStyles.coach}>DANCE  EDUCATOR</h1>
+              
             </div>
           </div>
           <div className={HomeStyles.btn}>

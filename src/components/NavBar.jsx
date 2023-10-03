@@ -28,7 +28,7 @@ const NavBar = () => {
     </div>
     <div className={NavbarStyles.linksContainer}>
         <ul className={NavbarStyles.links}>
-            {['about', 'photos', 'reel', 'contact'].map((item) => (
+            {['about', 'photos', 'reels', 'projects', 'contact'].map((item) => (
                 <li key={`link-${item}`} className={NavbarStyles.linkLi}>
                     <StyledLink href={`/${item}`} label={item} />
                 </li>
@@ -57,7 +57,7 @@ const NavBar = () => {
                 transition={{ durtation: 0.85, ease: 'easeOut' }}
             >
                 <ul className={NavbarStyles.dropdownLinks}>
-                    {['about', 'photos', 'reel', 'contact'].map((item) => (
+                    {['about', 'photos', 'reels', 'projects', 'contact'].map((item) => (
                         <li key={`mobile-link-${item}`} className={NavbarStyles.dropdownLinkLi}>
                             <Link href={`/${item}`} className={NavbarStyles.dropdownNavLink}>{item}</Link>
                         </li>
