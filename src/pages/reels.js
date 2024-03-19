@@ -4,7 +4,7 @@ import ReelStyles from "@/styles/ReelStyles.module.scss";
 
 const Reels = () => {
   const danceReel = "LTaSZgVgc5Q";
-  const choreReel = "rZim5q9QHtg";
+  const choreReel = "0ZLWms4-7wU";
   const opts = {
     playerVars: {
       autoplay: 0,
